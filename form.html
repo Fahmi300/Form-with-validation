@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+    <form name="form" onsubmit="return validateForm()">
+        <h1>Formulir Registrasi </h1>
+        <hr> <br>
+        <label class="required">Nama Lengkap</label>
+        <input type="text" name="nama" placeholder="Masukkan Nama Lengkap" maxlength="30">
+        <br> <br>
+
+        <label class="required">Jenis Kelamin</label>
+        <select name="jeniskel">
+            <option value="0">Laki-Laki</option>
+            <option value="1">Perempuan</option>
+        </select>
+        <br> <br>
+
+        <label class="required">Email</label>
+        <input type="text" name="email" placeholder="Masukkan Email Aktif">
+        <br> <br>
+
+        <label>Alamat</label>
+        <input type="text" name="alamat" placeholder="Masukkan Alamat (Optional)"Optional>
+        <br> <br>
+
+        <label class="required">No. Telepon</label>
+        <input type="text" name="notelp" placeholder="Masukkan Nomor Telepon" pattern="[0-9]">
+        <br> <br>
+
+        <label class="required">Username</label>
+        <input type="text" name="notelp" placeholder="Masukkan Username">
+        <br> <br>
+
+        <label class="required">Password</label>
+        <input type="text" name="password" placeholder="Masukkan Password">
+        <br> <br>
+
+        <label class="required">Confirm Password</label>
+        <input type="text" name="confirm-pass" placeholder="Masukkan Password">
+        <br> <br>
+        <button>Submit</button>
+        
+    </form>
+    <script>
+        function validateForm() {
+            if (document.forms["form"]["nama"].value == "") {
+                alert("Nama Tidak Boleh Kosong");
+                document.forms["form"]["nama"].focus();
+                return false;
+            }
+            if (document.forms["form"]["email"].value == "") {
+                alert("Email Tidak Boleh Kosong");
+                document.forms["form"]["email"].focus();
+                return false;
+            }
+            if (document.forms["form"]["jeniskel"].value == "") {
+                alert("Jenis Kelamin Tidak Boleh Kosong");
+                document.forms["form"]["jeniskel"].focus();
+                return false;
+            }
+            if (document.forms["form"]["notelp"].value == "") {
+                alert("Nomor Telepon Tidak Boleh Kosong");
+                document.forms["form"]["notelp"].focus();
+                return false;
+            }
+            if (document.forms["form"]["username"].value == "") {
+                alert("Username Tidak Boleh Kosong");
+                document.forms["form"]["username"].focus();
+                return false;
+            }
+            if (document.forms["form"]["Password"].value == "") {
+                alert("Password Tidak Boleh Kosong");
+                document.forms["form"]["Password"].focus();
+                return false;
+            }
+            if (document.forms["form"]["confirm-pass"].value == "") {
+                alert("Tolong Konfirmasi Password Kembali");
+                document.forms["form"]["confirm-pass"].focus();
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
